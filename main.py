@@ -33,7 +33,10 @@ def respond(voice_data):
         location = record_audio('What is that location?') 
         url = 'https://google.nl/maps/place/' + location + '/&amp;'       
         webbrowser.get().open(url)
-        print('Here is the location of ' + location)    
+        print('Here is the location of ' + location)
+    if 'exit' in voice_data:
+        exit()    
+
 
 time.sleep(1)
 print('How can I help you') 
